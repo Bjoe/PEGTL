@@ -12,7 +12,12 @@ jobs:
       script: |
         docker run -it -v ${TRAVIS_BUILD_DIR}:/source bojoe/cpp-android-ndk-build-env-ubuntu:r22beta1 '
         id
-        ls -al /opt/androidSdk'
+        ls -al /
+        ls -al /opt
+        ls -al /opt/androidSdk
+        ls -al /home
+        ls -al /home/developer
+        cat /etc/os-release'
       env:
         - ANDROID_ABI=armeabi-v7a
         - ANDROID_PLATFORM=android-26
